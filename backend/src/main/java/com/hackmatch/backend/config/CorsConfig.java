@@ -1,3 +1,4 @@
+
 package com.hackmatch.backend.config;
 
 import org.springframework.context.annotation.Bean;
@@ -16,7 +17,10 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry
                     .addMapping("/**")
-                    .allowedOrigins("http://localhost:5173")
+                    .allowedOriginPatterns(
+                        "http://localhost:5173",
+                        "https://*.vercel.app"
+                    )
                     .allowedMethods(
                         "GET",
                         "POST",
