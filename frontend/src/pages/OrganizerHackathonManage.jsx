@@ -152,9 +152,9 @@ export const OrganizerHackathonManage = () => {
   const parseTags = (str) =>
     str
       ? str
-          .split(",")
-          .map((s) => s.trim())
-          .filter((s) => s.length > 0)
+        .split(",")
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0)
       : [];
 
   const totalParticipants = teams.reduce(
